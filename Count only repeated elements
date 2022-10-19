@@ -1,0 +1,21 @@
+class Solution
+{
+    public static Point findRepeating(Integer arr[],int n)
+    {
+       HashMap<Integer,Integer> h = new HashMap<Integer,Integer>();
+       for(int i=0;i<n;i++){
+           if(h.containsKey(arr[i])){
+               h.put(arr[i],h.get(arr[i])+1);
+           }
+           else{
+               h.put(arr[i],1);
+           }
+       }
+       for(int i=0;i<n;i++){
+           if(h.get(arr[i])>1){
+               return new Point(arr[i],h.get(arr[i]));
+           }
+       }
+       return new Point(-1,-1);
+    }  
+}
