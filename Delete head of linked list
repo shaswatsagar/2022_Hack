@@ -1,0 +1,25 @@
+
+/*
+class Node
+{
+    int data;
+    Node next;
+
+    Node(int data)
+    {
+        this.data = data;
+        this.next = next;
+    }
+}
+*/
+
+class Delete
+{
+    Node deleteHead(Node head)
+    {
+         Node curr=head;
+         head=curr.next;
+         curr.next=null;
+        return head;
+    }
+}
