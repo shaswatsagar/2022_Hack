@@ -1,0 +1,13 @@
+
+class Get {
+    public static void reverseArray(int arr[], int n) {
+         int low=0,high=n-1;
+    while(low<high){
+        int tmp=arr[low];
+        arr[low]=arr[high];
+        arr[high]=tmp;
+        low++;
+        high--;
+    }
+}
+}
