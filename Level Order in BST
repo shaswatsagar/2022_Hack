@@ -1,0 +1,21 @@
+
+class BFS
+{
+    // Complete the function
+    // root: root node of the BST 
+    public static ArrayList<Integer> levelOrder(Node root)
+    {
+       ArrayList<Integer> list=new ArrayList<Integer>();
+       if(root==null)return list;
+       Queue<Node> q=new LinkedList<Node>();
+       q.add(root);
+       while(!q.isEmpty()){
+           Node curr= q.peek();
+           q.poll();
+           list.add(curr.data);
+           if(curr.left!=null)q.add(curr.left);
+           if(curr.right!=null)q.add(curr.right);
+       }
+       return list;
+    }
+}
